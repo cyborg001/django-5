@@ -67,7 +67,7 @@ def user_login(request):
                 return HttpResponse('ACCOUNT NOT ACTIVE')
         else:
             print("Someone tried to login and failed!")
-            print(f'Username: {username} and password {password}')
+            print('Username: {} and password {}'.format(username,password))
             return HttpResponse("invalid login details")
     else:
         return render(request,'basic_app/login.html',{})
